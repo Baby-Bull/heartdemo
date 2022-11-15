@@ -151,7 +151,7 @@
     <span id="text2"></span>
   </div>
 
-  <audio controls autoplay loop hidden>
+  <audio id="audio" controls autoplay loop hidden>
     <source src="music.mp3" type="audio/mpeg">
   </audio>
 
@@ -256,13 +256,19 @@
 
     animate();
 
+    var audio = document.getElementById('audio');
+    audio.play();
+    audio.pause();
+    setTimeout(function () {
+      audio.play();
+    }, 1500);
 
     /*
      * Settings
      */
     var settings = {
       particles: {
-        length: 3500, // maximum amount of particles
+        length: 1200, // maximum amount of particles
         duration: 4, // particle duration in sec
         velocity: 205, // particle velocity in pixels/sec
         effect: -0.55, // play with this for a nice effect
