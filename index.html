@@ -168,6 +168,12 @@
 
   <script>
 
+    document.addEventListener('click', musicPlay);
+    function musicPlay() {
+      document.getElementById('audio').play();
+      document.removeEventListener('click', musicPlay);
+    }
+
     const elts = {
       text1: document.getElementById("text1"),
       text2: document.getElementById("text2")
@@ -177,6 +183,7 @@
       "3",
       "2",
       "1",
+      "Click !",
       "Nger ơi !",
       "dậy thôi",
       "chúc Thang's",
